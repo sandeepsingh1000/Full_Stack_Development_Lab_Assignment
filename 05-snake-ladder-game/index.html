@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake and Ladder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Snake &amp; Ladder Game</h2>
+    <div class="layout">
+      <div id="board" class="board"></div>
+      <div class="panel">
+        <div class="player-info active" id="p1Box">
+          <span class="dot p1"></span> Player 1: <strong id="p1Pos">1</strong>
+        </div>
+        <div class="player-info" id="p2Box">
+          <span class="dot p2"></span> Player 2: <strong id="p2Pos">1</strong>
+        </div>
+        <div class="dice-area">
+          Dice: <span id="diceVal">-</span>
+        </div>
+        <button id="rollBtn">Roll Dice</button>
+        <button id="resetBtn">Reset</button>
+        <p id="msg">Player 1 turn. Click Roll Dice.</p>
+        <div class="legend">
+          <p><strong>Ladders:</strong> 4->25, 13->46, 33->49, 42->63, 50->69, 62->81, 74->92</p>
+          <p><strong>Snakes:</strong> 27->5, 40->3, 43->18, 54->31, 66->45, 76->58, 89->53, 99->41</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

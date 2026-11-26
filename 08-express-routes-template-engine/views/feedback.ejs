@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><title><%= title %></title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/services">Services</a>
+  <a href="/contact">Contact</a>
+  <a href="/feedback">Feedback</a>
+</nav>
+  <div class="container">
+    <h1>Feedback</h1>
+    <form action="/feedback" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <select name="rating">
+        <option value="5">5 / 5</option>
+        <option value="4">4 / 5</option>
+        <option value="3">3 / 5</option>
+        <option value="2">2 / 5</option>
+        <option value="1">1 / 5</option>
+      </select>
+      <textarea name="comment" rows="3" placeholder="Your feedback" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <h3>Recent Feedbacks</h3>
+    <% feedbacks.forEach(function(f) { %>
+      <div class="fb-item">
+        <strong><%= f.name %></strong> (Rating: <%= f.rating %>/5)<br>
+        <span><%= f.comment %></span>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

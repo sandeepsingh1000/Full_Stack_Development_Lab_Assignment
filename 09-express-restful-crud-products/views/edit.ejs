@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Edit Product</title><style>
+  body { font-family: Arial, sans-serif; background: #f8fafc; margin: 0; padding: 25px; }
+  .box { max-width: 760px; margin: 0 auto; background: #fff; padding: 22px; border: 1px solid #cbd5e1; }
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #e2e8f0; padding: 9px; text-align: left; }
+  th { background: #1e293b; color: #fff; }
+  .btn { padding: 6px 12px; text-decoration: none; border: none; cursor: pointer; font-size: 13px; display: inline-block; }
+  .add { background: #0d9488; color: #fff; }
+  .edit { background: #d97706; color: #fff; }
+  .del { background: #e11d48; color: #fff; }
+  .back { background: #64748b; color: #fff; }
+  form.form-col { display: flex; flex-direction: column; gap: 10px; max-width: 420px; }
+  input, textarea { padding: 8px; border: 1px solid #94a3b8; font-family: inherit; }
+</style></head>
+<body>
+  <div class="box">
+    <h2>Edit Product</h2>
+    <form class="form-col" action="/products/<%= product.id %>?_method=PUT" method="POST">
+      <input type="text" name="name" value="<%= product.name %>" required>
+      <input type="number" name="price" value="<%= product.price %>" required>
+      <textarea name="description" rows="3" required><%= product.description %></textarea>
+      <div>
+        <button class="btn edit" type="submit">Update</button>
+        <a class="btn back" href="/products">Cancel</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

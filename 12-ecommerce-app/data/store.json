@@ -1,0 +1,52 @@
+{
+  "nextProductId": 5,
+  "nextOrderId": 1002,
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Audio",
+      "price": 2499,
+      "stock": 15,
+      "description": "Over-ear Bluetooth headphones with mic."
+    },
+    {
+      "id": 2,
+      "name": "Mechanical Keyboard",
+      "category": "Accessories",
+      "price": 2999,
+      "stock": 10,
+      "description": "Blue switch keyboard for typing and gaming."
+    },
+    {
+      "id": 3,
+      "name": "Smart Watch",
+      "category": "Wearables",
+      "price": 3499,
+      "stock": 8,
+      "description": "Fitness tracker with step counter and notifications."
+    },
+    {
+      "id": 4,
+      "name": "Laptop Stand",
+      "category": "Workspace",
+      "price": 899,
+      "stock": 20,
+      "description": "Foldable aluminum stand for laptops."
+    }
+  ],
+  "orders": [
+    {
+      "id": 1001,
+      "customerName": "Rahul Sharma",
+      "paymentMethod": "UPI",
+      "transactionId": "TXN1001",
+      "items": [
+        { "id": 1, "name": "Wireless Headphones", "price": 2499, "qty": 1 }
+      ],
+      "total": 2499,
+      "status": "Confirmed",
+      "createdAt": "2026-11-24T10:00:00.000Z"
+    }
+  ]
+}

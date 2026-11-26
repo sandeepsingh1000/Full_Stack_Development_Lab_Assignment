@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>MongoDB Products CRUD</title><style>
+  body { font-family: Arial, sans-serif; background: #eff6ff; margin: 0; padding: 25px; }
+  .box { max-width: 760px; margin: 0 auto; background: #fff; padding: 22px; border: 1px solid #bfdbfe; }
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #dbeafe; padding: 9px; text-align: left; }
+  th { background: #1e40af; color: #fff; }
+  .btn { padding: 6px 12px; text-decoration: none; border: none; cursor: pointer; font-size: 13px; display: inline-block; }
+  .add { background: #16a34a; color: #fff; }
+  .edit { background: #ea580c; color: #fff; }
+  .del { background: #dc2626; color: #fff; }
+  .back { background: #475569; color: #fff; }
+  form.form-col { display: flex; flex-direction: column; gap: 10px; max-width: 420px; }
+  input, textarea { padding: 8px; border: 1px solid #93c5fd; font-family: inherit; }
+</style></head>
+<body>
+  <div class="box">
+    <div class="header">
+      <h2>MongoDB Products</h2>
+      <a class="btn add" href="/products/new">+ Add Product</a>
+    </div>
+    <% if (products.length === 0) { %>
+      <p>No products in database yet.</p>
+    <% } else { %>
+      <table>
+        <tr><th>Name</th><th>Category</th><th>Price</th><th>Actions</th></tr>
+        <% products.forEach(function(p) { %>
+          <tr>
+            <td><a href="/products/<%= p._id %>"><%= p.name %></a></td>
+            <td><%= p.category %></td>
+            <td>Rs. <%= p.price %></td>
+            <td>
+              <a class="btn edit" href="/products/<%= p._id %>/edit">Edit</a>
+              <form action="/products/<%= p._id %>?_method=DELETE" method="POST" style="display:inline;">
+                <button class="btn del" type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </table>
+    <% } %>
+  </div>
+</body>
+</html>

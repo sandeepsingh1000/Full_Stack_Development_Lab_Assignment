@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #faf5ff;
+  margin: 0;
+}
+
+header {
+  background: #3b0764;
+  color: #ffffff;
+  padding: 12px 24px;
+}
+
+.nav-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-inner h2 {
+  margin: 0;
+}
+
+.tabs button {
+  background: #6b21a8;
+  color: #ffffff;
+  border: none;
+  padding: 7px 14px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #10b981;
+}
+
+main {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e9d5ff;
+  padding: 14px;
+}
+
+.card h4 {
+  margin: 0 0 6px 0;
+  color: #3b0764;
+}
+
+.card button {
+  margin-top: 8px;
+  padding: 7px 12px;
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.box-form {
+  background: #ffffff;
+  border: 1px solid #e9d5ff;
+  padding: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.box-form input, .box-form select {
+  padding: 8px;
+  border: 1px solid #d8b4fe;
+}
+
+.box-form button {
+  padding: 8px 16px;
+  background: #059669;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-row, .order-box {
+  background: #ffffff;
+  border: 1px solid #e9d5ff;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seller-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.seller-table th, .seller-table td {
+  border: 1px solid #e9d5ff;
+  padding: 8px;
+  text-align: left;
+}
+
+.seller-table th {
+  background: #4c1d95;
+  color: #ffffff;
+}

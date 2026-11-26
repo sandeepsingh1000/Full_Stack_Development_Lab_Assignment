@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eff6ff;
+  margin: 0;
+  padding: 40px 15px;
+}
+
+.todo-box {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px 24px;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1e3a8a;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #93c5fd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.input-row button {
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 10px;
+  border: 1px solid #dbeafe;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background-color: #f8fafc;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.done .task-label {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.btn-group {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-group button {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid #93c5fd;
+  background: #ffffff;
+  color: #1e3a8a;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-group button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.btn-group .del-btn {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}

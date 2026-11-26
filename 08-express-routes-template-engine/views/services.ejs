@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title><%= title %></title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/services">Services</a>
+  <a href="/contact">Contact</a>
+  <a href="/feedback">Feedback</a>
+</nav>
+  <div class="container">
+    <h1>Services</h1>
+    <ul>
+      <% services.forEach(function(s) { %>
+        <li><%= s %></li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>

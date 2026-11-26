@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechKart Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <h2>TechKart</h2>
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('store')">Store</button>
+        <button class="tab" onclick="showTab('cart')">Cart (<span id="cartCount">0</span>)</button>
+        <button class="tab" onclick="showTab('orders')">Orders</button>
+        <button class="tab" onclick="showTab('seller')">Seller Panel</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="store" class="view active">
+      <h3>All Products</h3>
+      <div id="productGrid" class="grid"></div>
+    </section>
+
+    <section id="cart" class="view">
+      <h3>Shopping Cart &amp; Checkout</h3>
+      <div id="cartList"></div>
+      <p><strong>Total: Rs. <span id="cartTotal">0</span></strong></p>
+      <form id="checkoutForm" class="box-form">
+        <input type="text" id="custName" placeholder="Full Name" required>
+        <select id="payMethod">
+          <option value="UPI">UPI</option>
+          <option value="Card">Debit / Credit Card</option>
+          <option value="COD">Cash on Delivery</option>
+        </select>
+        <button type="submit">Place Order</button>
+      </form>
+    </section>
+
+    <section id="orders" class="view">
+      <h3>Successful Orders</h3>
+      <div id="ordersList"></div>
+    </section>
+
+    <section id="seller" class="view">
+      <h3>Seller Master Panel</h3>
+      <form id="sellerForm" class="box-form">
+        <input type="hidden" id="editId">
+        <input type="text" id="sName" placeholder="Product Name" required>
+        <input type="text" id="sCat" placeholder="Category" required>
+        <input type="number" id="sPrice" placeholder="Price" required>
+        <input type="number" id="sStock" placeholder="Stock" required>
+        <input type="text" id="sDesc" placeholder="Short description">
+        <button type="submit">Save Product</button>
+      </form>
+      <table class="seller-table">
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Price</th><th>Stock</th><th>Action</th></tr>
+        </thead>
+        <tbody id="sellerBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

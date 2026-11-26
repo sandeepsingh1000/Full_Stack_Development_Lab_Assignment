@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f3ff;
+  margin: 0;
+  padding: 25px;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 22px;
+  border: 1px solid #ddd6fe;
+}
+
+h2 {
+  color: #4c1d95;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #c4b5fd;
+}
+
+button {
+  padding: 8px 14px;
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ede9fe;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+th {
+  background: #4c1d95;
+  color: #ffffff;
+}
+
+.del-btn {
+  background: #e11d48;
+  padding: 5px 10px;
+}

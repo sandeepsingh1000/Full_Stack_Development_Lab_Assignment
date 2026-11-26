@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universities Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <h2>Find Universities by Country or Name</h2>
+    <form id="searchForm" class="search-bar">
+      <input type="text" id="countryInput" value="India" placeholder="Enter country or university name (e.g. India, Chitkara)" required>
+      <button type="submit">Search</button>
+    </form>
+    <p id="status"></p>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>University Name</th>
+          <th>State / Province</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+  font-family: Georgia, serif;
+  background-color: #fdf4ff;
+  margin: 0;
+  padding: 60px 16px;
+}
+
+.joke-card {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #f5d0fe;
+  border-radius: 6px;
+  padding: 26px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  font-family: Arial, sans-serif;
+  color: #701a75;
+}
+
+.category {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #fae8ff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #86198f;
+}
+
+.setup {
+  font-size: 18px;
+  margin: 18px 0 10px;
+  color: #1f2937;
+}
+
+.punchline {
+  font-size: 17px;
+  font-weight: bold;
+  color: #0284c7;
+  min-height: 24px;
+}
+
+button {
+  margin-top: 14px;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #a21caf;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title><%= title %></title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/services">Services</a>
+  <a href="/contact">Contact</a>
+  <a href="/feedback">Feedback</a>
+</nav>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <% if (submitted) { %>
+      <div class="notice">
+        Message received from <strong><%= submitted.name %></strong> (<%= submitted.email %>): <%= submitted.message %>
+      </div>
+    <% } %>
+    <form action="/contact" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>

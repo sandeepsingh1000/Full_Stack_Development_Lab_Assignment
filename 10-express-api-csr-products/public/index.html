@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products CSR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Products (Express API + Client-Side Rendering)</h2>
+    <form id="addForm">
+      <input type="text" id="pName" placeholder="Product name" required>
+      <input type="number" id="pPrice" placeholder="Price" required>
+      <input type="number" id="pRating" step="0.1" min="1" max="5" placeholder="Rating (1-5)" required>
+      <button type="submit">Add Product</button>
+    </form>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Price</th><th>Rating</th><th>Action</th></tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
